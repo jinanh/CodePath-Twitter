@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-- [ ] The current signed in user will be persisted across restarts. (1pt)
+- [x] The current signed in user will be persisted across restarts. (1pt)
 - [ ] Each tweet should display the relative timestamp for each tweet "8m", "7h". (1pt)
 - [x] User should be able to unretweet and unfavorite and should decrement the retweet and favorite count. (1pt)
 - [ ] Links in tweets are clickable. (2pts)
