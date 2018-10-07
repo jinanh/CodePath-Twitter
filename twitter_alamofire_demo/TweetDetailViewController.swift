@@ -29,6 +29,7 @@ class TweetDetailViewController: UIViewController {
     @IBOutlet weak var like: UIButton!
     
     var tweet: Tweet!
+    var user: User?
     
     @IBAction func retweetButton(_ sender: Any) {
         if(!(tweet.retweeted!)){
@@ -103,8 +104,9 @@ class TweetDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         profileImageView.af_setImage(withURL: (tweet.user.profileURL))
+        
         usernameLabel.text = tweet.user.name
         screenNameLabel.text = "@\(tweet.user.screenName )"
         messageLabel.text = tweet.text
@@ -129,14 +131,12 @@ class TweetDetailViewController: UIViewController {
             timePassedLabel.text = tweetTime.timeAgo()
         }
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
     
     
     
@@ -149,6 +149,9 @@ class TweetDetailViewController: UIViewController {
         if segue.identifier == "replySegue" {
             let replyViewController = segue.destination as! ReplyViewController
             replyViewController.tweet = tweet
+        } else if segue.identifier == "profileSegue" {
+            let tProfileVC = segue.destination as! TweetProfileViewController
+            tProfileVC.user = tweet.user
         }
     }
     

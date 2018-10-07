@@ -8,11 +8,12 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
     var tweets: [Tweet] = []
+    var user: User?
     var refreshControl: UIRefreshControl!
     
     @IBAction func logoutButton(_ sender: Any) {
@@ -84,6 +85,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -96,9 +98,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                 let detailViewController = segue.destination as! TweetDetailViewController
                 detailViewController.tweet = tweet
             }
-        } else if segue.identifier == "composeSege" {
-            let composeViewController = segue.destination as! ComposeViewController
-            composeViewController.delegate = self
         }
     }
 
