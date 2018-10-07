@@ -100,7 +100,7 @@ The following **stretch** features are implemented:
 The following **additional** features are implemented:
 
 - [x] List anything else that you can get done to improve the app functionality!
-- Change the color of status bar, navigation bar, navigation title, tab bar, and tab bar items
+- Change the color of status bar, navigation bar, navigation title, tab bar, and tab bar selected/unselected items
 - Add Twitter logo in the navigation bar as navigation title for some views
 - Add a placeholder for compose text view and reply text view
 - User can refresh user's timeline in profile view to see new tweets
