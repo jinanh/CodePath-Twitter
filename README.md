@@ -103,6 +103,7 @@ The following **additional** features are implemented:
 - Change the color of status bar, navigation bar, navigation title, tab bar, and tab bar items
 - Add Twitter logo in the navigation bar as navigation title for some views
 - Add a placeholder for compose text view and reply text view
+- User can refresh user's timeline in profile view to see new tweets
 - User can tap the retweet/unretweet and favorite/unfavorite buttons in user profile view and should increment/decrement the retweet and favorite count
 - In profile view, user can tap on a tweet in user's timeline to view it in a detail view, with controls to retweet, favorite, and reply
 
