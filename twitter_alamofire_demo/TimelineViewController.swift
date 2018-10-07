@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,7 +16,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     var refreshControl: UIRefreshControl!
     
     @IBAction func logoutButton(_ sender: Any) {
-        APIManager.logout()
+        APIManager.shared.logout()
     }
     
     override func viewDidLoad() {
@@ -31,11 +31,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         refreshControl.addTarget(self, action: #selector(didPullToRefresh(_:)), for: UIControlEvents.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
         
-        getHomeTimeline()
+        getNewTimeline()
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl){
-        getHomeTimeline()
+        getNewTimeline()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,27 +56,50 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func did(post: Tweet) {
+        self.getHomeTimeline()
+    }
+    
     func getHomeTimeline(){
         APIManager.shared.getHomeTimeLine { (tweets, error) in
             if let tweets = tweets {
                 self.tweets = tweets
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             } else if let error = error {
                 print(error.localizedDescription)
             }
         }
-        refreshControl.endRefreshing()
     }
     
+    func getNewTimeline(){
+        APIManager.shared.getNewHomeTimeLine { (tweets, error) in
+            if let tweets = tweets {
+                self.tweets = tweets
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
     
-    /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "detailSegue" {
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell){
+                let tweet = tweets[indexPath.row]
+                let detailViewController = segue.destination as! TweetDetailViewController
+                detailViewController.tweet = tweet
+            }
+        } else if segue.identifier == "composeSege" {
+            let composeViewController = segue.destination as! ComposeViewController
+            composeViewController.delegate = self
+        }
     }
-    */
 
 }

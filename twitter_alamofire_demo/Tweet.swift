@@ -18,8 +18,9 @@ class Tweet {
     var favorited: Bool? // Configure favorite button
     var retweetCount: Int? // Update favorite count label
     var retweeted: Bool? // Configure retweet button
-    var user: User? // Author of the Tweet
+    var user: User // Author of the Tweet
     var createdAtString: String? // String representation of date posted
+    var tweetSince: Date?
     
     // For Retweets
     var retweetedByUser: User?  // user who retweeted if tweet is retweet
@@ -43,7 +44,7 @@ class Tweet {
         favorited = dictionary["favorited"] as? Bool
         retweetCount = dictionary["retweet_count"] as? Int
         retweeted = dictionary["retweeted"] as? Bool
-        
+                
         // TODO: initialize user
         let user = dictionary["user"] as! [String: Any]
         self.user = User(dictionary: user)
@@ -61,6 +62,13 @@ class Tweet {
         formatter.timeStyle = .none
         // Convert Date to String and set the createdAtString property
         createdAtString = formatter.string(from: date)
+        
+        let timestampString = dictionary["created_at"] as? String
+        if let timestampString = timestampString {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
+            tweetSince = formatter.date(from: timestampString) as Date?
+        }
     }
     
     static func tweets(with array: [[String: Any]]) -> [Tweet] {

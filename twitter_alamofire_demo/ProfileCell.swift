@@ -1,56 +1,39 @@
 //
-//  TweetCell.swift
+//  ProfileCell.swift
 //  twitter_alamofire_demo
 //
-//  Created by Ka Lee on 9/27/18.
+//  Created by Ka Lee on 10/6/18.
 //  Copyright © 2018 Charles Hieger. All rights reserved.
 //
 
 import UIKit
-import AlamofireImage
 
-class TweetCell: UITableViewCell {
+class ProfileCell: UITableViewCell {
 
-    
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    
-    @IBOutlet weak var screenName: UILabel!
+    @IBOutlet weak var userScreenNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var userImageView: UIImageView!
-    
-    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var userTweetLabel: UILabel!
     
     @IBOutlet weak var favoriteCount: UILabel!
-    
     @IBOutlet weak var retweetCount: UILabel!
     
     @IBOutlet weak var favoriteButton: UIButton!
     
     @IBOutlet weak var retweetButton: UIButton!
     
-    
     var tweet: Tweet!{
         didSet{
+            profileImageView.af_setImage(withURL: tweet.user.profileURL)
             usernameLabel.text = tweet.user.name
-            screenName.text = "@\(tweet.user.screenName )"
-            dateLabel.text = tweet.createdAtString!
-            tweetTextLabel.text = tweet.text
-            if let favorite = tweet.favoriteCount {
-                favoriteCount.text = String(favorite)
-            } else {
-                favoriteCount.text = String(0)
-            }
-            if let retweet = tweet.retweetCount {
-                retweetCount.text = String(retweet)
-            } else {
-                retweetCount.text = String(0)
-            }
-            
-            userImageView.af_setImage(withURL: tweet.user.profileURL)
+            userScreenNameLabel.text = "@\(tweet.user.screenName)"
+            dateLabel.text = tweet.createdAtString
+            userTweetLabel.text = tweet.text
         }
     }
     
-    @IBAction func Favorite(_ sender: Any) {
+    @IBAction func Like(_ sender: Any) {
         if(!(tweet.favorited!)){
             let image = UIImage(named: "favor-icon-red")
             favoriteButton.setImage(image, for: UIControlState.normal)

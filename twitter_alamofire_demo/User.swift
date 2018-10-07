@@ -12,13 +12,38 @@ import Foundation
 
 class User: NSObject {
     var name: String?
-    var screenName: String?
+    var screenName: String
     var id: Int64
     var profileURL: URL
+    var bannerURL: URL?
+    var userDescription: String?
+    var tweetCount: Int?
+    var following: Int?
+    var followers: Int?
+    
+    
     var dictionary: [String: Any]?
     
     private static var _current: User?
     
+    init(dictionary: [String: Any]) {
+        self.dictionary = dictionary
+        name = dictionary["name"] as? String
+        screenName = dictionary["screen_name"] as! String
+        id = dictionary["id"] as! Int64
+        profileURL = URL(string: dictionary["profile_image_url_https"] as! String)!
+        if !(dictionary["profile_banner_url"] == nil) {
+            bannerURL = URL(string: dictionary["profile_banner_url"] as! String)!
+        } else {
+            bannerURL = URL(string: "nil")!
+        }
+        userDescription = dictionary["description"] as? String
+        tweetCount = dictionary["statuses_count"] as? Int
+        followers = dictionary["followers_count"] as? Int
+        following = dictionary["friends_count"] as? Int
+        
+        
+    }
     static var current: User? {
         get {
             if _current == nil {
@@ -40,15 +65,6 @@ class User: NSObject {
                 defaults.removeObject(forKey: "currentUserData")
             }
         }
-    }
-
-    init(dictionary: [String: Any]) {
-        self.dictionary = dictionary
-        name = dictionary["name"] as? String
-        screenName = dictionary["screen_name"] as? String
-        id = dictionary["id"] as! Int64
-        profileURL = URL(string: dictionary["profile_image_url_https"] as! String)!
-        
     }
 
 }

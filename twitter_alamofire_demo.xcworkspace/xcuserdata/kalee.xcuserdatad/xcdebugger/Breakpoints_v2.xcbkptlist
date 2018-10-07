@@ -2,4 +2,178 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitter_alamofire_demo/ComposeViewController.swift"
+            timestampString = "560574484.637247"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "ComposeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.tweetTextView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506226.546243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.tweetTextView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506226.548238"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; twitter_alamofire_demo.ComposeViewController"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506226.549929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "562">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;twitter_alamofire_demo.ComposeViewController&gt;"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506226.551668"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "497">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitter_alamofire_demo/ComposeViewController.swift"
+            timestampString = "560574484.637336"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "ComposeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.profileImageView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506242.41663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.profileImageView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506242.419163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; twitter_alamofire_demo.ComposeViewController"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506242.42221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "306">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitter_alamofire_demo.ComposeViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;twitter_alamofire_demo.ComposeViewController&gt;"
+                  moduleName = "twitter_alamofire_demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kalee/Desktop/CodePath/Twitter/ios_fbu_twitter-master/twitter_alamofire_demo/ComposeViewController.swift"
+                  timestampString = "560506242.424293"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitter_alamofire_demo/TweetDetailViewController.swift"
+            timestampString = "560586433.048048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

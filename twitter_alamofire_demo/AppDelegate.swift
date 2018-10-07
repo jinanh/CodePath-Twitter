@@ -13,11 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:        
+        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.statusBarStyle = .lightContent
         // MARK: TODO: Check for logged in user
-        
         NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in
             print("Logout notification received")
             // TODO: Load and show the login view controller
@@ -29,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if User.current != nil {
             print("Welcome back \(User.current?.name ?? "") 😀")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+            let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarHome")
             window?.rootViewController = homeViewController
             
         }
@@ -66,7 +65,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
 }
 
