@@ -101,7 +101,7 @@ The following **additional** features are implemented:
 
 - [x] List anything else that you can get done to improve the app functionality!
 - Change the color of status bar, navigation bar, navigation title, tab bar, and tab bar items
-- Add Twitter logo in the navigation bar as the title for some view controllers
+- Add Twitter logo in the navigation bar as navigation title for some views
 - Add a placeholder for compose text view and reply text view
 - User can tap the retweet/unretweet and favorite/unfavorite buttons in user profile view and should increment/decrement the retweet and favorite count
 - In profile view, user can tap on a tweet in user's timeline to view it in a detail view, with controls to retweet, favorite, and reply
